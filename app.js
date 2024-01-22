@@ -15,6 +15,9 @@ function mailTo(){
 
     window.open(mailTo, "_blank");
 }
+document.getElementById("brittany-site").addEventListener("click", event => {
+    window.open("https://v4.brittanychiang.com/", "_blank");
+})
 
 const navLinks = document.querySelectorAll(".nav-link");
 
