@@ -10,6 +10,11 @@ function opneGithubProfile(){
 
     window.open(githubProfile, "_blank");
 }
+function mailTo(){
+    let mailTo = "mailto:akshanshsingh00@gmail.com";
+
+    window.open(mailTo, "_blank");
+}
 
 const navLinks = document.querySelectorAll(".nav-link");
 
@@ -60,4 +65,4 @@ projectItems.forEach(projectItem => {
     projectItem.addEventListener('mouseout', event => {
         h2Element.classList.remove("heading-hover");
     })
-})
+});

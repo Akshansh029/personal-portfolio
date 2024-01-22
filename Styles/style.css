@@ -53,11 +53,6 @@ header{
     backdrop-filter: blur(10px);
     z-index: 99;
 }
-.logo{
-    font-size: 2rem;
-    color: var(--electric_blue);
-    font-family: var(--poppins);
-}
 nav ul{
     display: flex;
     gap: 2rem;
@@ -67,6 +62,7 @@ nav ul a{
     text-decoration: none;
     font-family: var(--space);
     color: var(--light_grey);
+    font-size: 0.9rem;
 }
 nav ul a:hover{
     color: var(--electric_blue);
@@ -187,18 +183,18 @@ aside.gmail-link .vertical-text::after{
     color: var(--light_grey);
     line-height: 1.7rem;
 }
-.home-content button{
+.special-btn{
     width: fit-content;
     padding: 1.2rem 3rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--electric_blue);
     background-color: transparent;
-    border: 3px solid var(--electric_blue);
+    border: 1.5px solid var(--electric_blue);
     border-radius: 5px;
     transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     cursor: pointer;
 }
-.home-content button:hover{
+.special-btn:hover{
     outline: none;
     box-shadow: 4px 4px 0 0 var(--electric_blue);
     transform: translate(-5px, -5px);
@@ -371,4 +367,52 @@ section h1 span.heading-number{
 }
 .heading-hover{
     color: var(--electric_blue);
+}
+.contact-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+#contact-heading{
+    font-size: 1.5rem;
+    font-family: var(--poppins);
+    color: var(--electric_blue);
+}
+#contact{
+    height: calc(100vh - 4rem);
+}
+#contact-heading span{
+    margin-right: 15px;
+    font-family: var(--space);
+    color: var(--electric_blue);
+}
+#contact h2{
+    font-size: 3rem;
+    font-family: var(--poppins) ;
+    color: var(--light_grey);
+}
+#contact p{
+    font-size: 1rem;
+    font-family: var(--poppins);
+    max-width: 600px;
+    text-align: center;
+    color: var(--light_grey);
+    font-weight: 300;
+}
+#contact .special-btn{
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+footer{
+    height: 4rem;
+    width: 100%;
+    background-color: transparent;
+    padding-bottom: 1rem;
+}
+footer p{
+    font-size: 0.8rem;
+    font-family: var(--space);
+    color: var(--light_grey);
+    text-align: center;
 }
