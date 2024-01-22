@@ -47,3 +47,17 @@ document.getElementById("Calculator-link").addEventListener("click", event => {
 document.getElementById("roadmap.sh").addEventListener("click", event => {
     window.open("https://roadmap.sh/full-stack");
 })
+
+let projectItems = document.querySelectorAll(".project-item");
+
+projectItems.forEach(projectItem => {
+    let childElements = projectItem.children;
+    let h2Element = childElements[1];
+
+    projectItem.addEventListener('mouseover', event => {
+        h2Element.classList.add("heading-hover");
+    })
+    projectItem.addEventListener('mouseout', event => {
+        h2Element.classList.remove("heading-hover");
+    })
+})

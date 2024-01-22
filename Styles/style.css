@@ -328,7 +328,7 @@ section h1 span.heading-number{
 #projects .projects-container:last-child{
     grid-area: six;
 }
-#projects .projects-container .item{
+#projects .projects-container .project-item{
     min-height: 22rem;
     display: flex;
     flex-direction: column;
@@ -339,10 +339,10 @@ section h1 span.heading-number{
     transition: all 0.1s ease-in-out;
     cursor: pointer;
 }
-#projects .projects-container .item:hover{
+#projects .projects-container .project-item:hover{
     transform: translateY(-7px);
 }
-#projects .projects-container .item .item-header{
+#projects .projects-container .project-item .item-header{
     height: fit-content;
     width: 100%;
     display: flex;
@@ -350,22 +350,25 @@ section h1 span.heading-number{
     align-items: center;
     justify-self: flex-start;
 }
-#projects .projects-container .item h2{
+#projects .projects-container .project-item h2{
     height: fit-content;
     font-size: 1.5rem;
     justify-self: center;
     font-family: var(--space);
 }
-#projects .projects-container .item p{
+#projects .projects-container .project-item p{
     font-size: 1rem;
     justify-self: center;
     font-weight: 300;
 }
-#projects .projects-container .item p > span{
+#projects .projects-container .project-item p > span{
     color: var(--electric_blue) ;
     font-weight: 600;
     transition: all 0.2s ease-in;
 }
-#projects .projects-container .item p > span:hover{
+#projects .projects-container .project-item p > span:hover{
     text-decoration: underline;
+}
+.heading-hover{
+    color: var(--electric_blue);
 }
