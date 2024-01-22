@@ -25,3 +25,25 @@ navLinks.forEach(navLink => {
         })
     })
 });
+
+document.getElementById("Epicurian-link").addEventListener("click", event => {
+    window.open("https://epicurian-restaurant.netlify.app/");
+})
+document.getElementById("Blog-link").addEventListener("click", event => {
+    window.open("https://ak-responsive-blog-site.netlify.app/");
+})
+document.getElementById("Weather-link").addEventListener("click", event => {
+    window.open("https://ak-weather-site.netlify.app/");
+})
+document.getElementById("Rock-paper-scissors-link").addEventListener("click", event => {
+    window.open("https://rock-paper-scissors-29.netlify.app/");
+})
+document.getElementById("Stopwatch-link").addEventListener("click", event => {
+    window.open("https://stopwatch-for-beginners.netlify.app/");
+})
+document.getElementById("Calculator-link").addEventListener("click", event => {
+    window.open("https://ak-simple-calculator.netlify.app/");
+})
+document.getElementById("roadmap.sh").addEventListener("click", event => {
+    window.open("https://roadmap.sh/full-stack");
+})

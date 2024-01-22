@@ -6,31 +6,57 @@
     --space: "Space Mono", monospace;
     --electric_blue: #08dfea;
     --light_grey: #b2b4c2;
+    --itemColor: #112240;
+    --rootbgColor: #081427;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    /* height: 40px; */
+  background-color: #213750;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--rootbgColor);
 }
 .root{
+    height: 100%;
     width: 100%;
-    background-color: #081427;
-    color: white;
+    background-color: var(--rootbgColor);
+}
+section{
+    height: 100vh;
+    position: relative;
+    top: 0rem;
+    width: 100%;
+    display: grid;
+    place-content: center;
 }
 header{
     width: 100%;
     height: 5rem;
-    padding: 1rem 3rem;
+    padding: 1rem 4rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     position: fixed;
-    backdrop-filter: blur(5px);
+    background-color: rgba(8, 20, 39,0.6);
+    backdrop-filter: blur(10px);
     z-index: 99;
 }
 .logo{
-    
+    font-size: 2rem;
+    color: var(--electric_blue);
+    font-family: var(--poppins);
 }
 nav ul{
     display: flex;
@@ -49,6 +75,7 @@ ul li a span{
     color: var(--electric_blue);
 }
 .wrapper{
+    height: 100%;
     padding: 0rem 14rem;
 }
 .media-links{
@@ -122,11 +149,10 @@ aside.gmail-link .vertical-text::after{
     width: 2px;
     background-color: var(--light_grey);
 }
-main section#home{
+#home{
     height: calc(100vh - 5rem);
     position: relative;
     top: 5rem;
-    padding: 3rem 0;
 }
 .home-content{
     display: flex;
@@ -142,11 +168,14 @@ main section#home{
     display: flex;
     flex-direction: column;
     font-family: var(--poppins);
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     line-height: 4.5rem;
 }
 .home-content .name-heading .h1_I_am{
     color: var(--light_grey);
+}
+.home-content .name-heading h1{
+    color: white;
 }
 .home-content .name-heading span{
     color: var(--electric_blue);
@@ -174,13 +203,8 @@ main section#home{
     box-shadow: 4px 4px 0 0 var(--electric_blue);
     transform: translate(-5px, -5px);
 }
-section#about{
-    height: 100vh;
-    width: 100%;
-    padding: 6rem 0;
-}
 #about .about-content{
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     display: flex;
     gap: 2rem;
 }
@@ -234,12 +258,11 @@ section h1 span.heading-number{
     align-items: center;
     gap: 0.3rem;
     font-size: 1rem;
-    background-color: #112240;
+    background-color: var(--itemColor);
     color: var(--light_grey);
     transition: all 0.15s ease-in-out;
 }
 .my-interests .interests-grid-container .item:hover{
-    /* transform: translate(-5px, -5px); */
     -webkit-box-shadow: 0px 0px 15px 3px var(--electric_blue);
     -moz-box-shadow: 0px 0px 15px 3px var(--electric_blue);
     box-shadow: 0px 0px 15px 3px var(--electric_blue);
@@ -249,4 +272,100 @@ section h1 span.heading-number{
     font-family: var(--poppins);
     font-weight: 600;
     font-size: 0.8rem;
+}
+#skills .skills-container{
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+#skills .skills-container .item{
+    padding: 2rem 2.2rem;
+    background-color: var(--itemColor);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--light_grey);
+    border-radius: 10px;
+    font-family: var(--poppins);
+}
+#skills .skills-container .item  h2{
+    font-family: var(--space);
+}
+#skills .skills-container .item .icons{
+    display: flex;
+    gap: 1.5rem;
+    font-size: 2rem;
+    color: var(--electric_blue);
+}
+#projects{
+    height: 160vh;
+}
+#projects .projects-container{
+    margin-top: 1.5rem;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 300px)); */
+    grid-template-areas:
+    "one two three"
+    "four five six";
+    gap: 1.5rem;
+}
+#projects .projects-container:first-child{
+    grid-area: one;
+}
+#projects .projects-container:nth-child(2){
+    grid-area: two;
+}
+#projects .projects-container:nth-child(3){
+    grid-area: three;
+}
+#projects .projects-container:nth-child(4){
+    grid-area: four;
+}
+#projects .projects-container:nth-child(5){
+    grid-area: five;
+}
+#projects .projects-container:last-child{
+    grid-area: six;
+}
+#projects .projects-container .item{
+    min-height: 22rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.8rem 2rem;
+    background-color: var(--itemColor);
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+#projects .projects-container .item:hover{
+    transform: translateY(-7px);
+}
+#projects .projects-container .item .item-header{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: flex-start;
+}
+#projects .projects-container .item h2{
+    height: fit-content;
+    font-size: 1.5rem;
+    justify-self: center;
+    font-family: var(--space);
+}
+#projects .projects-container .item p{
+    font-size: 1rem;
+    justify-self: center;
+    font-weight: 300;
+}
+#projects .projects-container .item p > span{
+    color: var(--electric_blue) ;
+    font-weight: 600;
+    transition: all 0.2s ease-in;
+}
+#projects .projects-container .item p > span:hover{
+    text-decoration: underline;
 }
