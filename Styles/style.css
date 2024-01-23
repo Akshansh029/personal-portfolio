@@ -410,7 +410,7 @@ section h1 span.heading-number{
 #contact{
     height: calc(100vh - 4rem);
     text-align: center;
-    padding: 7rem 0;
+    padding: 7rem 0 0 0;
 }
 .contact-container{
     text-align: center;
@@ -487,11 +487,11 @@ footer span{
         'three four'
         'five six';
     }
-    #contact{
+    /* #contact{
         margin-top: 4rem;
         display: grid;
         place-content: center;
-    }
+    } */
 }
 @media (max-width: 768px) {
     #home{
@@ -579,8 +579,5 @@ footer span{
     }
     #projects .projects-container .project-item h2{
         font-size: clamp(16px, 3vw, 28px);
-    }
-    #contact{
-        margin-top: 38rem;
     }
 }
