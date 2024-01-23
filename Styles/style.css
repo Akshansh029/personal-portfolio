@@ -493,11 +493,11 @@ footer span{
         display: grid;
         place-content: center;
     }
-    /* #contact h2{
-        font-size: clamp(2rem, 3vw, 3rem);
-    } */
 }
 @media (max-width: 768px) {
+    #home{
+        top: 2rem;
+    }
     .wrapper{
         padding: 0 3rem;
     }
@@ -576,6 +576,6 @@ footer span{
         font-size: clamp(16px, 3vw, 28px);
     }
     #contact{
-        margin-top: 18rem;
+        margin-top: 38rem;
     }
 }
