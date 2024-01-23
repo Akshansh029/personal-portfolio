@@ -34,13 +34,9 @@
     background-color: var(--rootbgColor);
 }
 section{
-    /* height: 100vh; */
-    /* position: relative;
-    top: 0rem; */
     width: 100%;
-    /* display: grid; */
-    /* place-content: center; */
     padding: 5rem 0;
+    /* margin: 5rem 0;   */
 }
 header{
     width: 100%;
@@ -204,7 +200,6 @@ aside.gmail-link .vertical-text::after{
     flex-direction: column;
     font-family: var(--poppins);
     font-size: clamp(2rem, 3vw, 2.5rem);
-    /* font-size: 2.5rem; */
     line-height: 4.5rem;
 }
 .home-content .name-heading .h1_I_am{
@@ -238,6 +233,9 @@ aside.gmail-link .vertical-text::after{
     outline: none;
     box-shadow: 4px 4px 0 0 var(--electric_blue);
     transform: translate(-5px, -5px);
+}
+#about{
+    margin: 5rem 0;
 }
 #about .about-content{
     margin-top: 1.5rem;
@@ -335,7 +333,8 @@ section h1 span.heading-number{
     color: var(--electric_blue);
 }
 #projects{
-    height: 160vh;
+    margin: 5rem 0;
+    /* padding: 0; */
 }
 #projects .projects-container{
     margin-top: 1.5rem;
@@ -489,7 +488,7 @@ footer span{
         'five six';
     }
     #contact{
-        margin-top: 8rem;
+        margin-top: 4rem;
         display: grid;
         place-content: center;
     }
@@ -497,6 +496,12 @@ footer span{
 @media (max-width: 768px) {
     #home{
         top: 2rem;
+    }
+    .home-content{
+        gap: 1.5rem;
+    }
+    .home-content .name-heading h1{
+        line-height: 4rem;
     }
     .wrapper{
         padding: 0 3rem;
