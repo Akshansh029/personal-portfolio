@@ -88,3 +88,36 @@ projectItems.forEach(projectItem => {
         h2Element.classList.remove("heading-hover");
     })
 });
+
+// const devName = document.getElementById("devName");
+// const footer = devName.parentElement;
+// // console.log(footer);
+
+// function changePosition(){
+//     var asideLeft = document.createElement("div")
+// }
+
+function updateFixedElementPosition() {
+        const fixedElement = document.getElementById('media-links');
+        const viewportWidth = window.innerWidth;
+
+        if (viewportWidth < 768) {
+            fixedElement.style.position = 'relative';   
+            fixedElement.style.bottom = '80px';
+            fixedElement.style.left = '0px';
+            fixedElement.style.marginInline = 'auto';
+            fixedElement.children[0].style.flexDirection = "row";
+            document.getElementById('footer').appendChild(fixedElement);
+        } else {
+            fixedElement.style.position = 'fixed';
+            fixedElement.style.bottom = '0';
+            fixedElement.style.left = '50px';
+            fixedElement.children[0].style.flexDirection = "column";
+            document.body.appendChild(fixedElement);
+        }
+    }
+
+updateFixedElementPosition();
+
+    // Update on window resize
+window.addEventListener('resize', updateFixedElementPosition);
