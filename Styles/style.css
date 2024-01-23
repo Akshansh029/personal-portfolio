@@ -34,12 +34,13 @@
     background-color: var(--rootbgColor);
 }
 section{
-    height: 100vh;
-    position: relative;
-    top: 0rem;
+    /* height: 100vh; */
+    /* position: relative;
+    top: 0rem; */
     width: 100%;
-    display: grid;
-    place-content: center;
+    /* display: grid; */
+    /* place-content: center; */
+    padding: 5rem 0;
 }
 header{
     width: 100%;
@@ -186,6 +187,7 @@ aside.gmail-link .vertical-text::after{
     height: calc(100vh - 5rem);
     position: relative;
     top: 5rem;
+    margin-bottom: 5rem;
 }
 .home-content{
     display: flex;
@@ -195,7 +197,7 @@ aside.gmail-link .vertical-text::after{
 .home-content > span{
     color: var(--electric_blue);
     font-family: var(--space);
-    font-size: clamp(0.7rem, 2vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 .home-content .name-heading{
     display: flex;
@@ -216,7 +218,7 @@ aside.gmail-link .vertical-text::after{
 }
 .home-content p.home-description{
     width: 50%;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 3vw, 1rem);
     font-family: var(--poppins);
     color: var(--light_grey);
     line-height: 1.7rem;
@@ -240,7 +242,7 @@ aside.gmail-link .vertical-text::after{
 #about .about-content{
     margin-top: 1.5rem;
     display: flex;
-    gap: 2rem;
+    gap: clamp(1rem, 2.5vw, 2rem);
 }
 #about .about-content .personal-content{
     display: flex;
@@ -386,7 +388,7 @@ section h1 span.heading-number{
 }
 #projects .projects-container .project-item h2{
     height: fit-content;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     justify-self: center;
     font-family: var(--space);
 }
@@ -406,6 +408,11 @@ section h1 span.heading-number{
 .heading-hover{
     color: var(--electric_blue);
 }
+#contact{
+    height: calc(100vh - 4rem);
+    text-align: center;
+    padding: 7rem 0;
+}
 .contact-container{
     text-align: center;
     display: flex;
@@ -417,26 +424,24 @@ section h1 span.heading-number{
     font-family: var(--poppins);
     color: var(--electric_blue);
 }
-#contact{
-    height: calc(100vh - 4rem);
-}
 #contact-heading span{
     margin-right: 15px;
     font-family: var(--space);
     color: var(--electric_blue);
 }
 #contact h2{
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-family: var(--poppins) ;
     color: var(--light_grey);
 }
 #contact p{
-    font-size: 1rem;
+    font-size: clamp(10px, 2.3vw, 16px);
     font-family: var(--poppins);
     max-width: 600px;
     text-align: center;
     color: var(--light_grey);
     font-weight: 300;
+    margin-inline: auto;
 }
 #contact .special-btn{
     margin: 0 auto;
@@ -474,6 +479,23 @@ footer span{
     #media-links{
         left: 3rem;
     }
+    .interests-grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #projects .projects-container{
+        grid-template-areas: 
+        'one two'
+        'three four'
+        'five six';
+    }
+    #contact{
+        margin-top: 8rem;
+        display: grid;
+        place-content: center;
+    }
+    /* #contact h2{
+        font-size: clamp(2rem, 3vw, 3rem);
+    } */
 }
 @media (max-width: 768px) {
     .wrapper{
@@ -523,5 +545,37 @@ footer span{
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-
+    #about .about-content{
+        flex-direction: column;
+        gap: 6rem;
+    }
+    #about .about-content .personal-content{
+        width: 100%;
+    }
+    .interests-grid-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 615px){
+    #skills .skills-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #projects .projects-container{
+        grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+        'six';
+    }
+    #projects .projects-container .project-item{
+        min-height: 16rem;
+    }
+    #projects .projects-container .project-item h2{
+        font-size: clamp(16px, 3vw, 28px);
+    }
+    #contact{
+        margin-top: 18rem;
+    }
 }

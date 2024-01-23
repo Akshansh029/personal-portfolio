@@ -89,19 +89,11 @@ projectItems.forEach(projectItem => {
     })
 });
 
-// const devName = document.getElementById("devName");
-// const footer = devName.parentElement;
-// // console.log(footer);
-
-// function changePosition(){
-//     var asideLeft = document.createElement("div")
-// }
-
 function updateFixedElementPosition() {
         const fixedElement = document.getElementById('media-links');
         const viewportWidth = window.innerWidth;
 
-        if (viewportWidth < 768) {
+        if (viewportWidth < 769) {
             fixedElement.style.position = 'relative';   
             fixedElement.style.bottom = '80px';
             fixedElement.style.left = '0px';
