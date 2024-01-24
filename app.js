@@ -95,8 +95,12 @@ function updateFixedElementPosition() {
         const viewportHeight = window.innerHeight;
         // console.log(window);
         // console.log(viewportWidth);
-        if(viewportHeight < 675){
+        if((viewportHeight < 675) && (viewportWidth < 440)){
             document.getElementById("about").style.marginTop = "20rem"
+        }
+        else if(viewportHeight < 560){
+                        document.getElementById("about").style.marginTop = "20rem";
+                        document.getElementById("footer").style.marginTop = "5rem";
         }
         else{
             document.getElementById("about").style.marginTop = "5rem"

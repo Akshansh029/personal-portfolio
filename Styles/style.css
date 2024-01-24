@@ -260,7 +260,7 @@ section h1 span.heading-number{
     font-size: 1.7rem;
 }
 #about p.description{
-    font-size: clamp(12px, 2.5vw, 15px);
+    font-size: clamp(13px, 2.5vw, 15px);
     font-family: var(--poppins);
     color: var(--light_grey);
     line-height: 1.7rem;
@@ -326,6 +326,9 @@ section h1 span.heading-number{
 #skills .skills-container .item  h2{
     font-family: var(--space);
 }
+#skills .skills-container .item  p{
+    font-size: clamp(14px, 3vw, 20px);
+}
 #skills .skills-container .item .icons{
     display: flex;
     gap: 1.5rem;
@@ -334,12 +337,10 @@ section h1 span.heading-number{
 }
 #projects{
     margin: 5rem 0;
-    /* padding: 0; */
 }
 #projects .projects-container{
     margin-top: 1.5rem;
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(150px, 300px)); */
     grid-template-areas:
     "one two three"
     "four five six";
@@ -387,12 +388,12 @@ section h1 span.heading-number{
 }
 #projects .projects-container .project-item h2{
     height: fit-content;
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: 1.5rem;
     justify-self: center;
     font-family: var(--space);
 }
 #projects .projects-container .project-item p{
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 3vw, 1rem);
     justify-self: center;
     font-weight: 300;
 }
@@ -578,6 +579,6 @@ footer span{
         min-height: 16rem;
     }
     #projects .projects-container .project-item h2{
-        font-size: clamp(16px, 3vw, 28px);
+        font-size: clamp(22px, 3vw, 28px);
     }
 }
