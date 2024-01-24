@@ -260,7 +260,7 @@ section h1 span.heading-number{
     font-size: 1.7rem;
 }
 #about p.description{
-    font-size: clamp(10px, 2.5vw, 15px);
+    font-size: clamp(12px, 2.5vw, 15px);
     font-family: var(--poppins);
     color: var(--light_grey);
     line-height: 1.7rem;
@@ -434,7 +434,7 @@ section h1 span.heading-number{
     color: var(--light_grey);
 }
 #contact p{
-    font-size: clamp(10px, 2.3vw, 16px);
+    font-size: clamp(12px, 2.3vw, 16px);
     font-family: var(--poppins);
     max-width: 600px;
     text-align: center;
