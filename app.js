@@ -92,6 +92,15 @@ projectItems.forEach(projectItem => {
 function updateFixedElementPosition() {
         const fixedElement = document.getElementById('media-links');
         const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        // console.log(window);
+        // console.log(viewportWidth);
+        if(viewportHeight < 675){
+            document.getElementById("about").style.marginTop = "20rem"
+        }
+        else{
+            document.getElementById("about").style.marginTop = "5rem"
+        }
 
         if (viewportWidth < 769) {
             fixedElement.style.position = 'relative';   
