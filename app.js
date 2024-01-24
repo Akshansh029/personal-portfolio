@@ -117,12 +117,15 @@ function updateFixedElementPosition() {
             fixedElement.style.bottom = '80px';
             fixedElement.style.left = '0px';
             fixedElement.style.marginInline = 'auto';
+            fixedElement.style.marginBottom = '2rem';
             fixedElement.children[0].style.flexDirection = "row";
             document.getElementById('footer').appendChild(fixedElement);
         } else {
             fixedElement.style.position = 'fixed';
             fixedElement.style.bottom = '0';
             fixedElement.style.left = '50px';
+            fixedElement.style.marginBottom = '0';
+
             fixedElement.children[0].style.flexDirection = "column";
             document.body.appendChild(fixedElement);
         }
