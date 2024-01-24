@@ -409,7 +409,8 @@ section h1 span.heading-number{
     color: var(--electric_blue);
 }
 #contact{
-    height: calc(100vh - 4rem);
+    /* height: calc(100vh - 4rem); */
+    height: fit-content;
     text-align: center;
     padding: 7rem 0 0 0;
 }
@@ -448,6 +449,7 @@ section h1 span.heading-number{
     margin-top: 3rem;
 }
 footer{
+    margin-top: 5rem;
     height: 4rem;
     width: 100%;
     background-color: transparent;

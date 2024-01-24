@@ -95,15 +95,21 @@ function updateFixedElementPosition() {
         const viewportHeight = window.innerHeight;
         // console.log(window);
         // console.log(viewportWidth);
+        // console.log(viewportHeight);
         if((viewportHeight < 675) && (viewportWidth < 440)){
             document.getElementById("about").style.marginTop = "20rem"
         }
         else if(viewportHeight < 560){
                         document.getElementById("about").style.marginTop = "20rem";
-                        document.getElementById("footer").style.marginTop = "5rem";
+        }
+        else if(viewportHeight < 460){
+            document.getElementById("about").style.marginTop = "20rem";
+            document.getElementById("about").style.height = "fit-content";
+                        document.getElementById("footer").style.marginTop = "20rem";
         }
         else{
-            document.getElementById("about").style.marginTop = "5rem"
+            document.getElementById("about").style.marginTop = "5rem";
+            document.getElementById("footer").style.marginTop = "10rem";
         }
 
         if (viewportWidth < 769) {
@@ -124,5 +130,4 @@ function updateFixedElementPosition() {
 
 updateFixedElementPosition();
 
-    // Update on window resize
 window.addEventListener('resize', updateFixedElementPosition);
