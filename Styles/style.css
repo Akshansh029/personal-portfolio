@@ -28,6 +28,15 @@
 ::-webkit-scrollbar-track {
   background-color: var(--rootbgColor);
 }
+.animate{
+    transform: translateY(-100px);
+    opacity: 0;
+}
+.show-animate{
+    transition: all 1s ease;
+    transform: translateY(0);
+    opacity: 0;
+}
 .root{
     height: 100%;
     width: 100%;
