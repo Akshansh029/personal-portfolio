@@ -136,9 +136,9 @@ window.addEventListener("resize", updateFixedElementPosition);
 let sections = document.querySelectorAll("section");
 let header = document.querySelectorAll("header");
 let footer = document.querySelectorAll("footer");
-console.log(sections);
-console.log(header);
-console.log(footer);
+// console.log(sections);
+// console.log(header);
+// console.log(footer);
 
 window.onscroll = () => {
   sections.forEach((sec) => {
